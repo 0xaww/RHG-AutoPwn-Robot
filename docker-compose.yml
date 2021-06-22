@@ -1,0 +1,21 @@
+version: '3'
+services:
+  robotcontainter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        root_passwd: Hillstone@123#
+        ctf_passwd: Hillstone@123#
+    privileged: true #root权限
+#     networks:
+#       rhgrobot:
+#         ipv4_address: 192.168.101.101
+#
+# networks:
+#   rhgrobot:
+#     driver: bridge
+#     ipam:
+#       driver: default
+#       config:
+#       - subnet: 192.168.101.0/24
